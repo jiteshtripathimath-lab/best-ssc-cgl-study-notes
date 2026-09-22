@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +51,13 @@
     <hr style="margin: 40px 0; border: 0; border-top: 1px solid #e2e8f0;">
     <h2>Latest Exam Strategy Guides & Solutions</h2>
     <main class="generated-articles-container" id="syndicated-content">
-        <!-- The Web 2.0 Engine will append AI-repurposed articles and strategy guides inside this container -->
+        <ul>
+          {% for post in site.posts %}
+            <li>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
     </main>
     <hr style="margin: 40px 0; border: 0; border-top: 1px solid #e2e8f0;">
 
